@@ -1,6 +1,27 @@
-# hstream
 
-High performance stream processing engine for IoT data written in Haskell.
+# HStream
+
+High performance stream processing platform for IoT data written in Haskell.
+
+## Architecture
+
+```
+            |----------------|
+            | Stream Process |
+            |----------------|
+               /|\     |
+                |     \|/
+            |---------------|
+            |  Rule | Func  |
+    P ----> | Stream PubSub | ----> S
+            |     Raft      |
+            |---------------|
+               /|\     |
+                |     \|/
+            |---------------|
+            | Stream Store  |
+            |---------------|
+```
 
 ## License
 
